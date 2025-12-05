@@ -1,0 +1,172 @@
+/* Archivo: estilo.css - Diseño de la pagina web*/
+
+/* 1. fondo de la pagina */
+.stApp {
+    background-image: url("https://images.pexels.com/photos/4712000/pexels-photo-4712000.jpeg?_gl=1*u0cpqr*_ga*NjY1ODU4NDkuMTc2NDM3NTQ0Nw..*_ga_8JE65Q40S6*czE3NjQzNzU0NDckbzEkZzEkdDE3NjQzNzc0NzMkajQ4JGwwJGgw.");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    /* Aclaramiento sutil para la imagen de fondo */
+    background-blend-mode: overlay; 
+    background-color: rgba(255, 255, 255, 0.4) !important; 
+}
+
+
+/* Punto 2: sidebar*/
+.st-emotion-cache-113itb1 /* <-- div de cada elemento que querramos editar */
+{
+    /* Mantenemos la imagen y el filtro sutil */
+    background-image: url("https://images.pexels.com/photos/8361520/pexels-photo-8361520.jpeg?_gl=1*1sh9nly*_ga*NjY1ODU4NDkuMTc2NDM3NTQ0Nw..*_ga_8JE65Q40S6*czE3NjQzNzU0NDckbzEkZzEkdDE3NjQzNzY2MzgkajQ2JGwwJGgw");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    
+    background-blend-mode: overlay; 
+    background-color: rgba(255, 255, 255, 0.7) !important; /* Capa blanca para legibilidad */
+}
+/* Punto 3: mejora de la legibilidad */
+div[data-testid="stSidebarContent"] {
+    background-color: transparent !important; /* <-- ¡Esto quita el negro interno! */
+}
+.st-emotion-cache-1gsv4e8, 
+.st-emotion-cache-nahz7x { 
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); 
+    background-color: #FFFFFF; /* Fondo BLANCO */
+}
+
+/* eliminacion de fondos de textos */
+.stHeading {
+    background-color: #FFFFFF; /* Fondo blanco para títulos */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Forzamos el color del texto a gris oscuro en todos los títulos */
+.stHeading > div > div > h1, .stHeading > div > div > h2, .stHeading > div > div > h3 {
+    color: #333333 !important; 
+}
+
+/* Divisores claros */
+.stDivider {
+    border-top: 1px solid #D3D3D3;
+}
+
+/* Punto 5: LIMPIEZA FINAL DE LA SIDEBAR*/
+div[data-testid="stSidebarUserContent"] div[data-testid="stElementContainer"] {
+    background-color: transparent !important;
+    padding: 0 !important;
+}
+
+/* Aseguramos que el contenedor del encabezado también sea transparente */
+div[data-testid="stSidebarUserContent"] div[data-testid="stHeading"] {
+    background-color: transparent !important;
+}
+
+.st-emotion-cache-1fwbbrh {
+    background-color: transparent !important;
+}
+
+/* Punto 6: imagen de fondo de los graficos */
+
+/* Aplicamos la imagen al contenedor principal de los gráficos Streamlit */
+.stPlotlyChart {
+    /* Aquí aplicamos la imagen de fondo deseada */
+    background-image: url("https://i.pinimg.com/1200x/f3/c9/b7/f3c9b73d6d9db19425d9ba94dadea332.jpg"); /* <-- url imagen */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px; /* Borde suave */
+    
+    /* Le damos una capa de aclaramiento BLANCO para la legibilidad */
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.8) !important; /* Capa blanca fuerte para ver ejes */
+}
+
+/* Forzamos el lienzo interno de Plotly a ser transparente */
+.js-plotly-plot .plotly .main-svg {
+    background: transparent !important;
+}
+
+/* Aseguramos que el área de Plotly Chart (la caja que lo contiene) también sea transparente */
+.st-emotion-cache-1215b22 { /* Selector común para la caja del gráfico */
+    background-color: transparent !important;
+}
+
+/* Punto 7: estilo titulo */
+
+/*Combinamos data-testid="stHeading" con el selector de caché interno. */
+div[data-testid="stHeading"] .st-emotion-cache-3uj0rx { 
+    background-image: url("https://i.pinimg.com/1200x/ca/d8/c4/cad8c4e1eb351316959f9a0592a393d7.jpg"); /* <-- URL de imagen*/
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    
+    background-blend-mode: overlay; 
+    background-color: rgba(255, 255, 255, 0.7) !important; /* Capa blanca semi-transparente */
+    
+    padding: 10px 15px; /* Padding uniforme */
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); 
+    margin-bottom: 5px;
+}
+
+
+/*Regla para asegurar que el texto sea oscuro */
+div[data-testid="stHeading"] .st-emotion-cache-3uj0rx h3 {
+    color: #333333 !important; 
+    text-shadow: none !important; 
+}
+
+
+/*Reglas para el Texto Azul (st.info/st.markdown) */
+.stAlert {
+    background-color: #F8F8FF !important;
+    border-radius: 10px;
+    padding: 15px;
+}
+/* Asegura que el texto azul sea oscuro */
+.stAlert p {
+    color: #333333 !important; 
+}
+
+/* Punto 8: limpieza contenedores graficos */
+
+/* Hacemos que el contenedor externo del título (stHeading) sea transparente */
+div[data-testid="stHeading"] {
+    background-color: transparent !important;
+}
+
+/* Punto 9: ESTILO DE LA BARRA SUPERIOR (HEADER)  */
+
+/*  Selector principal (La etiqueta <header> completa) */
+.st-emotion-cache-13892zc, 
+header[data-testid="stHeader"] { /* Usamos ambos selectores para máxima compatibilidad */
+    background-color: transparent !important; /* Forzamos la transparencia */
+    color: #333333 !important; /* Aseguramos que los íconos sean visibles */
+}
+
+/* Selector del toolbar interno */
+.stAppToolbar, 
+.st-emotion-cache-14vh5up {
+    background-color: transparent !important;
+}
+
+/* Limpieza de los contenedores internos que contienen los botones */
+.st-emotion-cache-scp8yw,
+.st-emotion-cache-1j22a0y {
+    background-color: transparent !important;
+    box-shadow: none !important; 
+}
+
+/*Limpiamos los botones mismos */
+.stToolbarActions button,
+.stMainMenu button,
+.st-emotion-cache-183fv89,
+.st-emotion-cache-15b0g9l {
+    background-color: transparent !important;
+    color: #333333 !important;
+}
+

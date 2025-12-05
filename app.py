@@ -57,7 +57,7 @@ df_global = df if genero_filtro == "Ambos" else df[df['Genero'] == genero_filtro
 
 # INTERFAZ PRINCIPAL
 st.markdown("""
-    <div class="main-header" style='text-align: center; color: #6F4E37;'>
+    <div class="main-header" style='text-align: center; color: #000000;'>
         <h1 style='font-family: Georgia;'>🌸 Análisis de Mercado: Perfumes eBay 🌸</h1>
         <p>Exploración interactiva de precios, ventas y tendencias.</p>
     </div>
